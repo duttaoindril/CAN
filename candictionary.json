@@ -1,3 +1,28 @@
+/*
+    LEGEND
+    ==
+    messageLength: Bytes
+    readLength: Bits
+
+    After identifying the message ID, you read the number of bytes as stated by the messageLength, and then identify the bits to read from the array of signals, and then return the value from each signal based on the name and type of the signal. The name will be the key, and the value will be based on the type:
+
+    If the type is combination, return the value from the passed in key of the combination.
+    Ex. If type is combination, and message length is 2, then inside the signal array, signals[i]["<COMBINATION TO BE PASSED IN>"] will result in a value. signals[i]["01"] = value to return with key name.
+
+    If the type is conversion, return the value from the passed in key converted to decimal?
+
+    If the type is boolean, return false for 0 and true for 1
+
+    //Decode all the data
+    for () {
+        //Decode Header
+        for() {
+            //Decode each Message
+            byteMessage = allData[start, start+dict[messageID][messageLength]]
+            decode(byteMessage, allData[start, start+dict[messageID][signals]])
+        }
+    }
+*/
 {
     "185": {
         "messageLength": 8
@@ -27,13 +52,80 @@
         "messageLength": 8
     },
     "151": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals" : [{
+                "byte": 1,
+                "bit": 0,
+                "readLength": 1,
+                "name": "DRV_DIST_SCALE",
+                "type": "combination",
+                "0": "km/h",
+                "1": "mph"
+            }, {
+                "byte": 1,
+                "bit": 1,
+                "readLength": 2,
+                "name": "DRV_CONS_SCALE",
+                "type": "combination",
+                "00": "km/L / KM/L",
+                "01": "L/100km / L/100KM",
+                "10": "MPG(US) / MPG_US",
+                "11": "MPG(UK) / MPG_UK"
+            }, {
+                "byte": 2,
+                "bit": 0,
+                "readLength": 16,
+                "name": "DIST2EMPTY",
+                "type": "conversion"
+            }, {
+                "byte": 4,
+                "bit": 0,
+                "readLength": 16,
+                "name": "INST_FCONS",
+                "type": "conversion"
+            }]
     },
     "154": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals" : [{
+                "byte": 2,
+                "bit": 0,
+                "readLength": 8,
+                "name": "FUEL_GAUGE",
+                "type": "conversion"
+            }, {
+                "byte": 3,
+                "bit": 2,
+                "readLength": 1,
+                "name": "REFUEL",
+                "type": "boolean"
+            }, {
+                "byte": 2,
+                "bit": 0,
+                "readLength": 8,
+                "name": "FUEL_GAUGE",
+                "type": "conversion"
+            }, {
+                "byte": 2,
+                "bit": 0,
+                "readLength": 8,
+                "name": "FUEL_GAUGE",
+                "type": "conversion"
+            }]
     },
     "101": {
-        "messageLength": 1
+        "messageLength": 1,
+        "signals" : [{
+                "byte": 1,
+                "bit": 6,
+                "readLength": 2,
+                "name": "ENGINE_STATUS",
+                "type": "combination",
+                "00": "Engine stall / STALL",
+                "01": "Engine cranking / CRANKING",
+                "10": "Engine Run / RUN",
+                "11": "Signal not available / SNA"
+            }]
     },
     "210": {
         "messageLength": 8
