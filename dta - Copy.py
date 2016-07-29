@@ -1,19 +1,11 @@
 import os, sys
+import json
+from pprint import pprint
 data= ''
+with open('candictionary.json') as data_file:    
+    data = json.load(data_file)
 
-
-def decode(slf )
-
-
-
-
-
-
-
-
-
-
-
+print(data)
 while len([f for f in os.listdir("unprocessed") if os.path.isfile(os.path.join("unprocessed", f))])>0:
 	onlyfiles = [f for f in os.listdir("unprocessed") if os.path.isfile(os.path.join("unprocessed", f))]
 	print onlyfiles
