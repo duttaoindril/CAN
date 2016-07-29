@@ -34,137 +34,270 @@
         "messageLength": 8
     },
     "424": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals": [{
+            "byte": 1,
+            "bit": 0,
+            "readLength": 3,
+            "name": "IGN_STAT",
+            "type": "combination",
+            "000" : "IGN_LOCK",
+            "001" : "IGN_OFF",
+            "010" : "IGN_ACC",
+            "011" : "IGN_OFF_ACC",
+            "100" : "IGN_RUN",
+            "101" : "IGN_START",
+            "111" : "IGN_SNA"
+        }, {
+            "byte": 2,
+            "bit": 0,
+            "readLength": 8,
+            "name": "BATT_VOLT",
+            "type": "conversion"
+        }, {
+            "byte": 4,
+            "bit": 6,
+            "readLength": 1,
+            "name": "FWIPER_ACTV",
+            "type": "boolean"
+        }, {
+            "byte": 4,
+            "bit": 7,
+            "readLength": 1,
+            "name": "RWIPER_ACTV",
+            "type": "boolean"
+        }, {
+            "byte": 7,
+            "bit": 1,
+            "readLength": 1,
+            "name": "LOBEAM_ON",
+            "type": "boolean"
+        }, {
+            "byte": 7,
+            "bit": 2,
+            "readLength": 1,
+            "name": "HIBEAM_ON",
+            "type": "boolean"
+        }, {
+            "byte": 7,
+            "bit": 3,
+            "readLength": 1,
+            "name": "FT_FOG_ON",
+            "type": "boolean"
+        }]
     },
     "425": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals": [{
+            "byte": 1,
+            "bit": 0,
+            "readLength": 3,
+            "name": "WIP_SW",
+            "type": "combination",
+            "000" :"STOP",
+            "001" :"INT",
+            "010" :"LO",
+            "011" :"HI",
+            "100" :"AUTO"
+        }, {
+            "byte": 1,
+            "bit": 3,
+            "readLength": 2,
+            "name": "WIP_STAT",
+            "type": "combination",
+            "00" : "STOP",
+            "01" : "MOVE"
+        }, {
+            "byte": 7,
+            "bit": 0,
+            "readLength": 1,
+            "name": "HAZ_SW",
+            "type": "boolean"
+        }]
     },
     "315": {
         "messageLength": 8,
         "signals" : [{
-
-            }]
+            "byte": 2,
+            "bit": 4,
+            "readLength": 1,
+            "name": "TRAC_SW",
+            "type": "boolean"
+        }, {
+            "byte": 3,
+            "bit": 0,
+            "readLength": 1,
+            "name": "ECO_SW_STAT",
+            "type": "boolean"
+        }, {
+            "byte": 5,
+            "bit": 1,
+            "readLength": 1,
+            "name": "LT_TURN_ON",
+            "type": "boolean"
+        }, {
+            "byte": 5,
+            "bit": 2,
+            "readLength": 1,
+            "name": "RT_TURN_ON",
+            "type": "boolean"
+        }, {
+            "byte": 5,
+            "bit": 3,
+            "readLength": 1,
+            "name": "HL_SW_MODE",
+            "type": "combination",
+            "000": "HL_SW_OFF",
+            "001": "HL_SW_PARK",
+            "010": "HL_SW_ON",
+            "011": "HL_SW_AUTO",
+            "111": "HL_SW_SNA"
+        }]
     },
     "39B": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals": [{
+            "byte": 1,
+            "bit": 3,
+            "readLength": 2,
+            "name": "HAZ_LAMP_STAT",
+            "type": "combination",
+            "00" : "NOT_ACTIVE",
+            "01" : "HAZ_LAMP_ON",
+            "10" : "HAZ_LAMP_OFF",
+            "11" : "SNA"
+        }, {
+            "byte": 2,
+            "bit": 4,
+            "readLength": 3,
+            "name": "SFT_POSITION_Sub",
+            "type": "combination",
+            "000" :"POS_P",
+            "001" :"POS_R",
+            "010" :"POS_N",
+            "011" :"POS_D",
+            "100" :"POS_DS",
+            "101" :"POS_L_OR_2",
+            "111" :"SNA"
+        }]
     },
     "151": {
         "messageLength": 8,
         "signals" : [{
-                "byte": 1,
-                "bit": 0,
-                "readLength": 1,
-                "name": "DRV_DIST_SCALE",
-                "type": "combination",
-                "0": "km/h",
-                "1": "mph"
-            }, {
-                "byte": 1,
-                "bit": 1,
-                "readLength": 2,
-                "name": "DRV_CONS_SCALE",
-                "type": "combination",
-                "00": "km/L / KM/L",
-                "01": "L/100km / L/100KM",
-                "10": "MPG(US) / MPG_US",
-                "11": "MPG(UK) / MPG_UK"
-            }, {
-                "byte": 2,
-                "bit": 0,
-                "readLength": 16,
-                "name": "DIST2EMPTY",
-                "type": "conversion"
-            }, {
-                "byte": 4,
-                "bit": 0,
-                "readLength": 16,
-                "name": "INST_FCONS",
-                "type": "conversion"
-            }]
+            "byte": 1,
+            "bit": 0,
+            "readLength": 1,
+            "name": "DRV_DIST_SCALE",
+            "type": "combination",
+            "0": "km/h",
+            "1": "mph"
+        }, {
+            "byte": 1,
+            "bit": 1,
+            "readLength": 2,
+            "name": "DRV_CONS_SCALE",
+            "type": "combination",
+            "00": "km/L / KM/L",
+            "01": "L/100km / L/100KM",
+            "10": "MPG(US) / MPG_US",
+            "11": "MPG(UK) / MPG_UK"
+        }, {
+            "byte": 2,
+            "bit": 0,
+            "readLength": 16,
+            "name": "DIST2EMPTY",
+            "type": "conversion"
+        }, {
+            "byte": 4,
+            "bit": 0,
+            "readLength": 16,
+            "name": "INST_FCONS",
+            "type": "conversion"
+        }]
     },
     "154": {
         "messageLength": 8,
         "signals" : [{
-                "byte": 2,
-                "bit": 0,
-                "readLength": 8,
-                "name": "FUEL_GAUGE",
-                "type": "conversion"
-            }, {
-                "byte": 3,
-                "bit": 2,
-                "readLength": 1,
-                "name": "REFUEL",
-                "type": "boolean"
-            }, {
-                "byte": 3,
-                "bit": 4,
-                "readLength": 1,
-                "name": "ODO_SCALE",
-                "type": "combination",
-                "0": "km",
-                "1": "mile"
-            }, {
-                "byte": 8,
-                "bit": 0,
-                "readLength": 24,
-                "name": "ODO",
-                "type": "conversion"
-            }]
+            "byte": 2,
+            "bit": 0,
+            "readLength": 8,
+            "name": "FUEL_GAUGE",
+            "type": "conversion"
+        }, {
+            "byte": 3,
+            "bit": 2,
+            "readLength": 1,
+            "name": "REFUEL",
+            "type": "boolean"
+        }, {
+            "byte": 3,
+            "bit": 4,
+            "readLength": 1,
+            "name": "ODO_SCALE",
+            "type": "combination",
+            "0": "km",
+            "1": "mile"
+        }, {
+            "byte": 8,
+            "bit": 0,
+            "readLength": 24,
+            "name": "ODO",
+            "type": "conversion"
+        }]
     },
     "101": {
         "messageLength": 1,
         "signals" : [{
-                "byte": 1,
-                "bit": 6,
-                "readLength": 2,
-                "name": "ENGINE_STATUS",
-                "type": "combination",
-                "00": "Engine stall / STALL",
-                "01": "Engine cranking / CRANKING",
-                "10": "Engine Run / RUN",
-                "11": "Signal not available / SNA"
-            }]
+            "byte": 1,
+            "bit": 6,
+            "readLength": 2,
+            "name": "ENGINE_STATUS",
+            "type": "combination",
+            "00": "Engine stall / STALL",
+            "01": "Engine cranking / CRANKING",
+            "10": "Engine Run / RUN",
+            "11": "Signal not available / SNA"
+        }]
     },
     "210": {
         "messageLength": 8,
         "signals" : [{
-                "byte": 1,
-                "bit": 0,
-                "readLength": 8,
-                "name": "TPS",
-                "type": "conversion"
-            }, {
-                "byte": 4,
-                "bit": 3,
-                "readLength": 4,
-                "name": "CCSL_STATE",
-                "type": "combination",
-                "0000": "All off / ALL_OFF",
-                "0001": "CC standby / CC_STANDBY",
-                "0010": "CC active / CC_ACTIVE",
-                "0011": "CC accel override / CC_ACCEL_OVERRIDE",
-                "0101": "ACC system on / ACCS_ON",
-                "0111": "CC fail / CC_FAIL",
-                "1001": "ASLF standby / ASLF_STANDBY",
-                "1010": "ASLF active / ASLF_ACTIVE",
-                "1011": "ASLF temp cancel / ASLF_TEMP_CANCEL",
-                "1100": "ASLF warning buzzer & display / ASLF_WARN_BZR_DISP",
-                "1101": "ASLF warning display / ASLF_WARN_DISP",
-                "1111": "ASLF fail / ASLF_FAIL"
-            }, {
-                "byte": 5,
-                "bit": 4,
-                "readLength": 1,
-                "name": "CRUISE_EGD",
-                "type": "boolean"
-            }, {
-                "byte": 6,
-                "bit": 5,
-                "readLength": 1,
-                "name": "CRUISE_ON",
-                "type": "boolean"
-            }]
+            "byte": 1,
+            "bit": 0,
+            "readLength": 8,
+            "name": "TPS",
+            "type": "conversion"
+        }, {
+            "byte": 4,
+            "bit": 3,
+            "readLength": 4,
+            "name": "CCSL_STATE",
+            "type": "combination",
+            "0000": "All off / ALL_OFF",
+            "0001": "CC standby / CC_STANDBY",
+            "0010": "CC active / CC_ACTIVE",
+            "0011": "CC accel override / CC_ACCEL_OVERRIDE",
+            "0101": "ACC system on / ACCS_ON",
+            "0111": "CC fail / CC_FAIL",
+            "1001": "ASLF standby / ASLF_STANDBY",
+            "1010": "ASLF active / ASLF_ACTIVE",
+            "1011": "ASLF temp cancel / ASLF_TEMP_CANCEL",
+            "1100": "ASLF warning buzzer & display / ASLF_WARN_BZR_DISP",
+            "1101": "ASLF warning display / ASLF_WARN_DISP",
+            "1111": "ASLF fail / ASLF_FAIL"
+        }, {
+            "byte": 5,
+            "bit": 4,
+            "readLength": 1,
+            "name": "CRUISE_EGD",
+            "type": "boolean"
+        }, {
+            "byte": 6,
+            "bit": 5,
+            "readLength": 1,
+            "name": "CRUISE_ON",
+            "type": "boolean"
+        }]
     },
     "6FD": {
         "messageLength": 8
@@ -244,5 +377,45 @@
             "name": "VEH_SPEED",
             "type": "conversion"
         }]
+    },
+    "6EA": {
+        "messageLength": 8,
+        "signals": [{
+            "byte": 2,
+            "bit": 0,
+            "readLength": 16,
+            "name": "TPM_V_FR",
+            "type": "conversion"
+        }, {
+            "byte": 4,
+            "bit": 0,
+            "readLength": 16,
+            "name": "TPM_V_FL",
+            "type": "conversion"
+        }, {
+            "byte": 6,
+            "bit": 0,
+            "readLength": 16,
+            "name": "TPM_V_RR",
+            "type": "conversion"
+        }, {
+            "byte": 8,
+            "bit": 0,
+            "readLength": 16,
+            "name": "TPM_V_RL",
+            "type": "conversion"
+        }]
+    },
+    "6EB": {
+        "messageLength": 8,
+        "signals": [{
+
+        }]
+    },
+    "6EC": {
+        "messageLength": 8
+    },
+    "6ED": {
+        "messageLength": 8
     }
 }
