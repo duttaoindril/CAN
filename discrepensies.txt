@@ -1,0 +1,3 @@
+Row 37, is it supposed to be Byte 2 for row 36 and Byte 4 for row 37 or Byte 3 for row 36 and Byte 5 for row 37
+
+Row 98, is it Byte 6, or Byte 8?

@@ -3,6 +3,8 @@
     ==
     messageLength: Bytes
     readLength: Bits
+    byte: 1 index based
+    bits: 0 index based
 
     After identifying the message ID, you read the number of bytes as stated by the messageLength, and then identify the bits to read from the array of signals, and then return the value from each signal based on the name and type of the signal. The name will be the key, and the value will be based on the type:
 
@@ -13,19 +15,41 @@
 
     If the type is boolean, return false for 0 and true for 1
 
-    //Decode all the data
-    for () {
-        //Decode Header
-        for() {
-            //Decode each Message
-            byteMessage = allData[start, start+dict[messageID][messageLength]]
-            decode(byteMessage, allData[start, start+dict[messageID][signals]])
+    //Look through the unprocessed folder files until it's empty
+    while() {
+        //Decode all the data
+        for () {
+            //Decode Header
+            for() {
+                //Decode each Message
+                byteMessage = allData[start, start+dict[messageID][messageLength]]
+                decode(byteMessage, allData[start, start+dict[messageID][signals]])
+            }
         }
     }
 */
 {
     "185": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals": [{
+            "byte": 1,
+            "bit": 1,
+            "readLength": 1,
+            "name": "AC_SEL",
+            "type": "boolean"
+        }, {
+            "byte": 1,
+            "bit": 3,
+            "readLength": 1,
+            "name": "BLOWER_HI",
+            "type": "boolean"
+        }, {
+            "byte": 1,
+            "bit": 4,
+            "readLength": 1,
+            "name": "MAX_COOL_AC",
+            "type": "boolean"
+        }]
     },
     "5BA": {
         "messageLength": 8
@@ -46,7 +70,10 @@
         "messageLength": 8
     },
     "315": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals" : [{
+
+            }]
     },
     "39B": {
         "messageLength": 8
@@ -100,16 +127,18 @@
                 "name": "REFUEL",
                 "type": "boolean"
             }, {
-                "byte": 2,
-                "bit": 0,
-                "readLength": 8,
-                "name": "FUEL_GAUGE",
-                "type": "conversion"
+                "byte": 3,
+                "bit": 4,
+                "readLength": 1,
+                "name": "ODO_SCALE",
+                "type": "combination",
+                "0": "km",
+                "1": "mile"
             }, {
-                "byte": 2,
+                "byte": 8,
                 "bit": 0,
-                "readLength": 8,
-                "name": "FUEL_GAUGE",
+                "readLength": 24,
+                "name": "ODO",
                 "type": "conversion"
             }]
     },
@@ -128,7 +157,44 @@
             }]
     },
     "210": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals" : [{
+                "byte": 1,
+                "bit": 0,
+                "readLength": 8,
+                "name": "TPS",
+                "type": "conversion"
+            }, {
+                "byte": 4,
+                "bit": 3,
+                "readLength": 4,
+                "name": "CCSL_STATE",
+                "type": "combination",
+                "0000": "All off / ALL_OFF",
+                "0001": "CC standby / CC_STANDBY",
+                "0010": "CC active / CC_ACTIVE",
+                "0011": "CC accel override / CC_ACCEL_OVERRIDE",
+                "0101": "ACC system on / ACCS_ON",
+                "0111": "CC fail / CC_FAIL",
+                "1001": "ASLF standby / ASLF_STANDBY",
+                "1010": "ASLF active / ASLF_ACTIVE",
+                "1011": "ASLF temp cancel / ASLF_TEMP_CANCEL",
+                "1100": "ASLF warning buzzer & display / ASLF_WARN_BZR_DISP",
+                "1101": "ASLF warning display / ASLF_WARN_DISP",
+                "1111": "ASLF fail / ASLF_FAIL"
+            }, {
+                "byte": 5,
+                "bit": 4,
+                "readLength": 1,
+                "name": "CRUISE_EGD",
+                "type": "boolean"
+            }, {
+                "byte": 6,
+                "bit": 5,
+                "readLength": 1,
+                "name": "CRUISE_ON",
+                "type": "boolean"
+            }]
     },
     "6FD": {
         "messageLength": 8
@@ -200,6 +266,13 @@
         "messageLength": 8
     },
     "6FA": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals": [{
+            "byte": 2,
+            "bit": 0,
+            "readLength": 16,
+            "name": "VEH_SPEED",
+            "type": "conversion"
+        }]
     }
 }
