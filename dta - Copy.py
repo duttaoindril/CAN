@@ -41,10 +41,12 @@ for l in range(0,len(onlyfiles)):
 	print int(data[0:8], 2)
 	data = data[8:]
 	key = str(hex(int(data[0:16], 2)))[2:]
-	print type(key)
-	print a(jsondict[key])
+	print type(jsondict[key])
+	print jsondict[key]
 	data = data[16:]
-	print data
+	signals = jsondict[key]["signals"][0]
+	signal = str(data[(signals["byte"]-1)*8+signals["bit"]:(signals["byte"]-1)*8+signals["bit"]+signals["readLength"]])
+	print signals[signal]
 	
 	# separated  = [i for i in data]
 	# for n in range(0,len(separated)):
