@@ -26,9 +26,26 @@ for l in range(0,len(onlyfiles)):
 	 		file.close()
 	 		break
 	print data
-	print bool(data[0:8])
-	print bool(data[8:16])
-	print int(data[16:])
+	if bool(data[0:8]):
+		time = int(data[16:48], 2)
+		data = data[0:16]+data[48:]
+		print time
+	print data
+	if bool(data[8:16]):
+		lat = int(data[16:48], 2)
+		print lat
+		lon = int(data[48:80], 2)
+		print lon
+		data = data[0:16]+data[80:]
+	data = data[16:]
+	print int(data[0:8], 2)
+	data = data[8:]
+	key = str(hex(int(data[0:16], 2)))[2:]
+	print type(key)
+	print a(jsondict[key])
+	data = data[16:]
+	print data
+	
 	# separated  = [i for i in data]
 	# for n in range(0,len(separated)):
 	# 	new_data=''
