@@ -1,4 +1,4 @@
-file = open("candat - Copy.dat", "rb")
+file = open("candata.dat", "rb")
 data_1= open("canbinary.txt",'w')
 #data = file.readlines()
 #print '\n'.join(data)

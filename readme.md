@@ -8,8 +8,9 @@ To Do List:
     - Understand how devices and VINs work
 	- Request with HTTPS, get the file in Hex | **DONE WITH NODEJS**
 2. Decode
-    - Set up a very Basic Dictionary to do all the decoding from
-    - Convert the excel to a JSON Dictionary
+    - Convert the excel to a JSON Dictionary | **DONE WITH JSON**
+    - Set up a hex 2 binary dictionary to enable all the decoding | **DONE WITH JSON**
+    - Write a program to decode the downloaded file | **DONE WITH NODEJS**
 3. Store into Mongo/JSON/CSV
     - Primarily Focused on JSON/CSV
     - If doing JSON, each messageID would have it's own array of rows
