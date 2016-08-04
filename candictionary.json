@@ -342,7 +342,34 @@
         "messageLength": 8
     },
     "8": {
-        "messageLength": 8
+        "messageLength": 8,
+        "signals": [{
+            "byte": 3,
+            "bit": 6,
+            "readLength": 2,
+            "name": "PSG_SEATBELT",
+            "type": "combination",
+            "00": "PSG_SEATBELT_OK",
+            "01": "PSG_SEATBELT_NOK",
+            "10": "SEATBELT_FAIL",
+            "11": "SEATBELT_SNA"
+        }, {
+            "byte": 4,
+            "bit": 6,
+            "readLength": 2,
+            "name": "DRV_SEATBELT",
+            "type": "combination",
+            "00": "DRV_SEATBELT_OK",
+            "01": "DRV_SEATBELT_NOK",
+            "10": "SEATBELT_FAIL",
+            "11": "SEATBELT_SNA"
+        }, {
+            "byte": 6,
+            "bit": 6,
+            "readLength": 1,
+            "name": "PSG_BAG_DSBL",
+            "type": "boolean"
+        }]
     },
     "A0": {
         "messageLength": 8
@@ -409,7 +436,13 @@
     "6EB": {
         "messageLength": 8,
         "signals": [{
-
+            "byte": 1,
+            "bit": 0,
+            "readLength": 1,
+            "name": "TPM_SCALE",
+            "type": "combination",
+            "0": "psi",
+            "1": "kPa"
         }]
     },
     "6EC": {
