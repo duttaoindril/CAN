@@ -1,59 +1,120 @@
 {
-	"campaign0": {
-		"vin0": {
-			"17": [],
-			"101": [{
-				"time": 315965950,
-				"latitude": 0,
-				"longitude": 0,
-				"ENGINE_STATUS": "CRANKING"
-			}, {
-				"time": 315965946,
-				"latitude": 0,
-				"longitude": 0,
-				"ENGINE_STATUS": "CRANKING"
-			}],
-			"424": [{
-				"time": 315965690,
-				"latitude": 0,
-				"longitude": 0,
-				"IGN_STAT": "IGN_LOCK",
-				"BATT_VOLTUnit": "V",
-				"BATT_VOLT": 15.2,
-				"FWIPER_ACTV": true,
-				"RWIPER_ACTV": true,
-				"LOBEAM_ON": false,
-				"HIBEAM_ON": true,
-				"FT_FOG_ON": false
-			}, {
-				"time": 315965946,
-				"latitude": 0,
-				"longitude": 0,
-				"IGN_STAT": "IGN_LOCK",
-				"BATT_VOLTUnit": "V",
-				"BATT_VOLT": 15.2,
-				"FWIPER_ACTV": true,
-				"RWIPER_ACTV": true,
-				"LOBEAM_ON": false,
-				"HIBEAM_ON": true,
-				"FT_FOG_ON": false
-			}],
-			"425": [{
-				"time": 315965691,
-				"latitude": 0,
-				"longitude": 0,
-				"WIP_SW": "STOP",
-				"WIP_STAT": "STOP",
-				"HAZ_SW": false
-			}, {
-				"time": 315965946,
-				"latitude": 0,
-				"longitude": 0,
-				"WIP_SW": "STOP",
-				"WIP_STAT": "STOP",
-				"HAZ_SW": false
-			}],
-			"6FD": []
-		}
-	}
+  "campaign0": {
+    "vin0": {
+      "101": [
+        {
+          "time": 315965950,
+          "latitude": 0,
+          "longitude": 0,
+          "ENGINE_STATUS": "CRANKING"
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "ENGINE_STATUS": "CRANKING"
+        },
+        {
+          "time": 315965950,
+          "latitude": 0,
+          "longitude": 0,
+          "ENGINE_STATUS": "CRANKING"
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "ENGINE_STATUS": "CRANKING"
+        }
+      ],
+      "424": [
+        {
+          "time": 315965690,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STAT": "IGN_LOCK",
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 15.2,
+          "FWIPER_ACTV": true,
+          "RWIPER_ACTV": true,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STAT": "IGN_LOCK",
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 15.2,
+          "FWIPER_ACTV": true,
+          "RWIPER_ACTV": true,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 315965690,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STAT": "IGN_LOCK",
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 15.2,
+          "FWIPER_ACTV": true,
+          "RWIPER_ACTV": true,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STAT": "IGN_LOCK",
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 15.2,
+          "FWIPER_ACTV": true,
+          "RWIPER_ACTV": true,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        }
+      ],
+      "425": [
+        {
+          "time": 315965691,
+          "latitude": 0,
+          "longitude": 0,
+          "WIP_SW": "STOP",
+          "WIP_STAT": "STOP",
+          "HAZ_SW": false
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "WIP_SW": "STOP",
+          "WIP_STAT": "STOP",
+          "HAZ_SW": false
+        },
+        {
+          "time": 315965691,
+          "latitude": 0,
+          "longitude": 0,
+          "WIP_SW": "STOP",
+          "WIP_STAT": "STOP",
+          "HAZ_SW": false
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "WIP_SW": "STOP",
+          "WIP_STAT": "STOP",
+          "HAZ_SW": false
+        }
+      ]
+    }
+  }
 }

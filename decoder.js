@@ -1,9 +1,13 @@
+var spaze = 2;
 var db = "./allData.json"
+var successful = "successful";
+var errr = "error";
 var allData = require(db);
 var canDict = require("./candictionary.json");
 var binDict = require("./hex2binDict.json");
 var chokidar = require('chokidar');
 var fs = require('fs');
+var logs = "";
 
 chokidar.watch('unprocessed', {
     awaitWriteFinish: {
@@ -13,56 +17,64 @@ chokidar.watch('unprocessed', {
 }).on('add', (event, path) => {
     setTimeout(function(params) {
         fs.readFile(event, function(err, data) {
-            console.log(event);
-            fs.writeFile(db, decode(data, "campaign0"), function(err) {
-                if (err)
-                    return console.log(err);
-                console.log("The file was saved!");
+            log("Reading file " + event + "...\n");
+            var campId = "campaign0";
+            var vId = "vin0";
+            if (allData[campId] == undefined)
+                allData[campId] = {};
+            if (allData[campId][vId] == undefined)
+                allData[campId][vId] = {};
+            var decodedObj = decode(data, campId, vId);
+            if (decodedObj === false) fs.writeFile(errr + "/" + event.substr(11), data, function(err) {
+                if (err) { console.log(err); return;}
+                finish("The file could not be decoded; check logs.txt and error folder!", event);
+            });
+            else fs.writeFile(db, decodedObj, function(err) {
+                if (err) { console.log(err); return;}
+                fs.writeFile(successful + "/" + event.substr(11), data, function(err) {
+                    if (err) { console.log(err); return;}
+                    finish("The file was decoded successfully; check logs.txt and successful folder!", event);
+                });
             });
         });
-        fs.unlink(event);
     }, 100);
 });
 
-function decode(data, campaignId) {
-    var returnObj = {};
+function decode(data, campaignId, vinId) {
     var byteArray = data.toString("hex").match(/.{1,2}/g);
     while (byteArray.length > 0) {
         var time = null;
         if (byteArray[0] == "01") {
             time = parseInt("0x" + byteArray.splice(2, 4).join([separator = '']));
-            console.log("Time: " + (new Date(time * 1000).toLocaleString()));
+            log("Time: " + (new Date(time * 1000).toLocaleString()));
         }
         var latitude = null;
         var longitude = null;
         if (byteArray[1] == "01") {
             latitude = parseFloat("0x" + byteArray.splice(2, 4).join([separator = '']));
-            console.log("Latitude: " + latitude);
+            log("Latitude: " + latitude);
             longitude = parseFloat("0x" + byteArray.splice(2, 4).join([separator = '']));
-            console.log("Longitude: " + longitude);
+            log("Longitude: " + longitude);
         }
         byteArray.splice(0, 2); // Remove time and location header
         var messageCount = parseInt("0x" + byteArray.splice(0, 1).join([separator = '']));
-        console.log("Number of Messages: " + messageCount);
+        log("Number of Messages: " + messageCount);
         for (var i = 0; i < messageCount; i++) {
             var messageId = byteArray.splice(0, 2).join([separator = '']).replace(/^[0]+/g, "").toUpperCase();
-            console.log("Message ID: " + messageId);
-            // var messageLength = canDict[messageId]["messageLength"];
-            // console.log("Message Length: "+messageLength);
+            log("Message ID: " + messageId);
             var message = byteArray.splice(0, canDict[messageId]["messageLength"]);
-            console.log("Message: " + message);
-            console.log("Binary Message: " + hex2bin(message));
-            if (allData[campaignId]["vin0"][messageId] == undefined)
-                allData[campaignId]["vin0"][messageId] = [];
-            if (canDict[messageId]["signals"] != undefined)
-                allData[campaignId]["vin0"][messageId].push(decodeHelper(time, latitude, longitude, message, hex2bin(message).reverse(), canDict[messageId]["signals"]));
+            log("Message: " + message);
+            log("Binary Message: " + hex2bin(message) + "\n--");
+            if (canDict[messageId]["signals"] != undefined) {
+                if (allData[campaignId][vinId][messageId] == undefined) allData[campaignId][vinId][messageId] = [];
+                var decodedMessage = decodeHelper(time, latitude, longitude, message, hex2bin(message).reverse(), canDict[messageId]["signals"]);
+                if (decodedMessage === false) return false;
+                else allData[campaignId][vinId][messageId].push(decodedMessage);
+            }
         }
-        console.log();
+        log("");
     }
-    console.log("=====================================");
-    console.log(JSON.stringify(allData));
-    console.log("=====================================");
-    return JSON.stringify(allData);
+    return JSON.stringify(allData, null, spaze);
 }
 
 function decodeHelper(time, lat, lon, hexmessage, binmessage, signals) {
@@ -72,14 +84,14 @@ function decodeHelper(time, lat, lon, hexmessage, binmessage, signals) {
         "longitude": lon
     };
     for (let signal of signals) {
-        console.log(JSON.stringify(signal));
+        log(JSON.stringify(signal));
         var bits = binmessage[signal.byte - 1].substring(signal.bit, signal.bit + signal.readLength);
-        console.log(bits);
+        log(bits);
         var temp;
         if (signal.type == "boolean")
             temp = !!parseInt(bits);
         else if (signal.type == "conversion") {
-            console.log("Converting " + r(bits) + " to " + parseInt(r(bits), 2));
+            log("Converting " + r(bits) + " to " + parseInt(r(bits), 2));
             temp = parseInt(r(bits), 2);
             if (signal.mult != undefined)
                 temp = temp * signal.mult;
@@ -92,13 +104,15 @@ function decodeHelper(time, lat, lon, hexmessage, binmessage, signals) {
                 tempJObject[signal.name + "Unit"] = null;
                 tempJObject[signal.name + "UnitRefer"] = signal.units;
             }
-        } else if (signal.type == "combination") // console.log("r[bits] is a " + typeof r(bits) + " with value " + r(bits));
+        } else if (signal.type == "combination") // log("r[bits] is a " + typeof r(bits) + " with value " + r(bits));
             temp = signal[bits];
-        console.log("Temp is a " + typeof temp + " with value " + temp);
+        log("Temp is a " + typeof temp + " with value " + temp);
+        if (temp === undefined)
+            return false;
         tempJObject[signal.name] = temp;
-        console.log("--");
+        log("--");
     }
-    console.log(JSON.stringify(tempJObject));
+    log(JSON.stringify(tempJObject));
     return tempJObject;
 }
 
@@ -110,5 +124,18 @@ function hex2bin(hex) {
     var binArray = [];
     for (var i = 0; i < hex.length; i++)
         binArray.push(binDict[hex[i].toString().charAt(0).toUpperCase()] + binDict[hex[i].toString().charAt(1).toUpperCase()]);
-    return binArray; //.join([separator = '']);
+    return binArray;
+}
+
+function log(data) {
+    logs = logs + data + "\n";
+    console.log(data);
+}
+
+function finish(data, event) {
+    fs.unlink(event);
+    log(data);
+    log("=====================================\n");
+    fs.appendFile('logs.txt', logs + "\n", function (err) { });
+    logs = "";
 }
