@@ -53,7 +53,11 @@
             "bit": 0,
             "readLength": 8,
             "name": "BATT_VOLT",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.1,
+            "trunc": 1,
+            "units": "V",
+            "unitDict": false
         }, {
             "byte": 4,
             "bit": 6,
@@ -197,22 +201,30 @@
             "readLength": 2,
             "name": "DRV_CONS_SCALE",
             "type": "combination",
-            "00": "km/L / KM/L",
-            "01": "L/100km / L/100KM",
-            "10": "MPG(US) / MPG_US",
-            "11": "MPG(UK) / MPG_UK"
+            "00": "KM/L",
+            "01": "L/100KM",
+            "10": "MPG_US",
+            "11": "MPG_UK"
         }, {
             "byte": 2,
             "bit": 0,
             "readLength": 16,
             "name": "DIST2EMPTY",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 1,
+            "trunc": 0,
+            "units": "DRV_DIST_SCALE",
+            "unitDict": true
         }, {
             "byte": 4,
             "bit": 0,
             "readLength": 16,
             "name": "INST_FCONS",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.1,
+            "trunc": 1,
+            "units": "DRV_CONS_SCALE",
+            "unitDict": true
         }]
     },
     "154": {
@@ -222,7 +234,11 @@
             "bit": 0,
             "readLength": 8,
             "name": "FUEL_GAUGE",
-            "type": "conversion"
+            "type": "conversion",
+            "add": -64,
+            "trunc": 0,
+            "units": "%",
+            "unitDict": false
         }, {
             "byte": 3,
             "bit": 2,
@@ -242,7 +258,11 @@
             "bit": 0,
             "readLength": 24,
             "name": "ODO",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.1,
+            "trunc": 1,
+            "units": "km",
+            "unitDict": false
         }]
     },
     "101": {
@@ -253,10 +273,10 @@
             "readLength": 2,
             "name": "ENGINE_STATUS",
             "type": "combination",
-            "00": "Engine stall / STALL",
-            "01": "Engine cranking / CRANKING",
-            "10": "Engine Run / RUN",
-            "11": "Signal not available / SNA"
+            "00": "STALL",
+            "01": "CRANKING",
+            "10": "RUN",
+            "11": "SNA"
         }]
     },
     "210": {
@@ -266,25 +286,29 @@
             "bit": 0,
             "readLength": 8,
             "name": "TPS",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.4,
+            "trunc": 1,
+            "units": "%",
+            "unitDict": false
         }, {
             "byte": 4,
             "bit": 3,
             "readLength": 4,
             "name": "CCSL_STATE",
             "type": "combination",
-            "0000": "All off / ALL_OFF",
-            "0001": "CC standby / CC_STANDBY",
-            "0010": "CC active / CC_ACTIVE",
-            "0011": "CC accel override / CC_ACCEL_OVERRIDE",
-            "0101": "ACC system on / ACCS_ON",
-            "0111": "CC fail / CC_FAIL",
-            "1001": "ASLF standby / ASLF_STANDBY",
-            "1010": "ASLF active / ASLF_ACTIVE",
-            "1011": "ASLF temp cancel / ASLF_TEMP_CANCEL",
-            "1100": "ASLF warning buzzer & display / ASLF_WARN_BZR_DISP",
-            "1101": "ASLF warning display / ASLF_WARN_DISP",
-            "1111": "ASLF fail / ASLF_FAIL"
+            "0000": "ALL_OFF",
+            "0001": "CC_STANDBY",
+            "0010": "CC_ACTIVE",
+            "0011": "CC_ACCEL_OVERRIDE",
+            "0101": "ACCS_ON",
+            "0111": "CC_FAIL",
+            "1001": "ASLF_STANDBY",
+            "1010": "ASLF_ACTIVE",
+            "1011": "ASLF_TEMP_CANCEL",
+            "1100": "ASLF_WARN_BZR_DISP",
+            "1101": "ASLF_WARN_DISP",
+            "1111": "ASLF_FAIL"
         }, {
             "byte": 5,
             "bit": 4,
@@ -393,17 +417,21 @@
         "messageLength": 8
     },
     "215": {
-        "messageLength": 8
-    },
-    "6FA": {
         "messageLength": 8,
         "signals": [{
             "byte": 2,
             "bit": 0,
             "readLength": 16,
             "name": "VEH_SPEED",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.0078124332407605,
+            "trunc": 2,
+            "units": "km/h",
+            "unitDict": false
         }]
+    },
+    "6FA": {
+        "messageLength": 8
     },
     "6EA": {
         "messageLength": 8,
@@ -412,25 +440,41 @@
             "bit": 0,
             "readLength": 16,
             "name": "TPM_V_FR",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.01,
+            "trunc": 2,
+            "units": "TPM_SCALE",
+            "unitDict": true
         }, {
             "byte": 4,
             "bit": 0,
             "readLength": 16,
             "name": "TPM_V_FL",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.01,
+            "trunc": 2,
+            "units": "TPM_SCALE",
+            "unitDict": true
         }, {
             "byte": 6,
             "bit": 0,
             "readLength": 16,
             "name": "TPM_V_RR",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.01,
+            "trunc": 2,
+            "units": "TPM_SCALE",
+            "unitDict": true
         }, {
             "byte": 8,
             "bit": 0,
             "readLength": 16,
             "name": "TPM_V_RL",
-            "type": "conversion"
+            "type": "conversion",
+            "mult": 0.01,
+            "trunc": 2,
+            "units": "TPM_SCALE",
+            "unitDict": true
         }]
     },
     "6EB": {
