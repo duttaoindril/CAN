@@ -342,3 +342,863 @@ The file was decoded successfully; check logs.txt and successful folder!
 =====================================
 
 
+Reading file unprocessed\1470684408355.dat...
+
+Time: 1/5/1980, 4:14:50 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965690,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+
+Time: 1/5/1980, 4:14:51 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965691,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+
+Time: 1/5/1980, 4:19:10 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965950,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+Time: 1/5/1980, 4:19:06 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 5
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965946,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+The file was decoded successfully; check logs.txt and successful folder!
+=====================================
+
+
+Reading file unprocessed\1470684511578.dat...
+
+Time: 1/5/1980, 4:14:50 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965690,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+
+Time: 1/5/1980, 4:14:51 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965691,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+
+Time: 1/5/1980, 4:19:10 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965950,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+Time: 1/5/1980, 4:19:06 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 5
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965946,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+The file was decoded successfully; check logs.txt and successful folder!
+=====================================
+
+
+Reading file unprocessed\1470686516372.dat...
+
+Time: 1/5/1980, 4:14:50 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965690,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+
+Time: 1/5/1980, 4:14:51 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965691,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+
+Time: 1/5/1980, 4:19:10 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965950,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+Time: 1/5/1980, 4:19:06 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 5
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965946,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+The file was decoded successfully; check logs.txt and successful folder!
+=====================================
+
+
+Reading file unprocessed\1470687027191.dat...
+
+Time: 1/5/1980, 4:14:50 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965690,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+
+Time: 1/5/1980, 4:14:51 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965691,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+
+Time: 1/5/1980, 4:19:10 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965950,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+Time: 1/5/1980, 4:19:06 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 5
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965946,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+The file was decoded successfully; check logs.txt and successful folder!
+=====================================
+
+
+Reading file unprocessed\1470687110000.dat...
+
+Time: 1/5/1980, 4:14:50 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965690,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+
+Time: 1/5/1980, 4:14:51 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965691,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+
+Time: 1/5/1980, 4:19:10 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965950,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+
+Time: 1/5/1980, 4:19:11 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 1
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+Time: 1/5/1980, 4:19:06 PM
+Latitude: 0
+Longitude: 0
+Number of Messages: 5
+Message ID: 424
+Message: 71,27,19,20,17,25,19,17
+Binary Message: 01110001,00100111,00011001,00100000,00010111,00100101,00011001,00010111
+--
+{"100":"IGN_RUN","101":"IGN_START","111":"IGN_SNA","byte":1,"bit":0,"readLength":3,"name":"IGN_STAT","type":"combination","000":"IGN_LOCK","001":"IGN_OFF","010":"IGN_ACC","011":"IGN_OFF_ACC"}
+000
+Temp is a string with value IGN_LOCK
+--
+{"byte":2,"bit":0,"readLength":8,"name":"BATT_VOLT","type":"conversion","mult":0.1,"trunc":1,"units":"V","unitDict":false}
+00011001
+Converting 10011000 to 152
+Temp is a number with value 15.2
+--
+{"byte":4,"bit":6,"readLength":1,"name":"FWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":4,"bit":7,"readLength":1,"name":"RWIPER_ACTV","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":1,"readLength":1,"name":"LOBEAM_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"byte":7,"bit":2,"readLength":1,"name":"HIBEAM_ON","type":"boolean"}
+1
+Temp is a boolean with value true
+--
+{"byte":7,"bit":3,"readLength":1,"name":"FT_FOG_ON","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"IGN_STAT":"IGN_LOCK","BATT_VOLTUnit":"V","BATT_VOLT":15.2,"FWIPER_ACTV":true,"RWIPER_ACTV":true,"LOBEAM_ON":false,"HIBEAM_ON":true,"FT_FOG_ON":false}
+Message ID: 425
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+{"100":"AUTO","byte":1,"bit":0,"readLength":3,"name":"WIP_SW","type":"combination","000":"STOP","001":"INT","010":"LO","011":"HI"}
+000
+Temp is a string with value STOP
+--
+{"byte":1,"bit":3,"readLength":2,"name":"WIP_STAT","type":"combination","00":"STOP","01":"MOVE"}
+00
+Temp is a string with value STOP
+--
+{"byte":7,"bit":0,"readLength":1,"name":"HAZ_SW","type":"boolean"}
+0
+Temp is a boolean with value false
+--
+{"time":315965946,"latitude":0,"longitude":0,"WIP_SW":"STOP","WIP_STAT":"STOP","HAZ_SW":false}
+Message ID: 6FD
+Message: 11,67,49,70,87,95,99,07
+Binary Message: 00010001,01100111,01001001,01110000,10000111,10010101,10011001,00000111
+--
+Message ID: 101
+Message: 99
+Binary Message: 10011001
+--
+{"10":"RUN","11":"SNA","byte":1,"bit":6,"readLength":2,"name":"ENGINE_STATUS","type":"combination","00":"STALL","01":"CRANKING"}
+01
+Temp is a string with value CRANKING
+--
+{"time":315965946,"latitude":0,"longitude":0,"ENGINE_STATUS":"CRANKING"}
+Message ID: 17
+Message: 29,18,29,10
+Binary Message: 00101001,00011000,00101001,00010000
+--
+
+The file was decoded successfully; check logs.txt and successful folder!
+=====================================
+
+

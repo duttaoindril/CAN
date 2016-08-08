@@ -26,13 +26,22 @@ chokidar.watch('unprocessed', {
                 allData[campId][vId] = {};
             var decodedObj = decode(data, campId, vId);
             if (decodedObj === false) fs.writeFile(errr + "/" + event.substr(11), data, function(err) {
-                if (err) { console.log(err); return;}
+                if (err) {
+                    console.log(err);
+                    return;
+                }
                 finish("The file could not be decoded; check logs.txt and error folder!", event);
             });
             else fs.writeFile(db, decodedObj, function(err) {
-                if (err) { console.log(err); return;}
+                if (err) {
+                    console.log(err);
+                    return;
+                }
                 fs.writeFile(successful + "/" + event.substr(11), data, function(err) {
-                    if (err) { console.log(err); return;}
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
                     finish("The file was decoded successfully; check logs.txt and successful folder!", event);
                 });
             });
@@ -55,6 +64,13 @@ function decode(data, campaignId, vinId) {
             log("Latitude: " + latitude);
             longitude = parseFloat("0x" + byteArray.splice(2, 4).join([separator = '']));
             log("Longitude: " + longitude);
+        }
+        if (time != null && latitude != null && time != null) {
+            if (allData[campaignId][vinId]["location"] == undefined) allData[campaignId][vinId]["location"] = {};
+            allData[campaignId][vinId]["location"][time] = {
+                "lon": longitude,
+                "lat": latitude
+            };
         }
         byteArray.splice(0, 2); // Remove time and location header
         var messageCount = parseInt("0x" + byteArray.splice(0, 1).join([separator = '']));
@@ -136,6 +152,6 @@ function finish(data, event) {
     fs.unlink(event);
     log(data);
     log("=====================================\n");
-    fs.appendFile('logs.txt', logs + "\n", function (err) { });
+    fs.appendFile('logs.txt', logs + "\n", function(err) {});
     logs = "";
 }
