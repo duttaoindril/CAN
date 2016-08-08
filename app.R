@@ -25,7 +25,6 @@ shinyApp(ui = dashboardPage(
                 ),
                 tabPanel("batteryVoltage",
                     box(width = 12,
-                        h1("Battery Voltage over Time"),
                         plotOutput("bvts")
                     )
                 )
@@ -35,17 +34,15 @@ shinyApp(ui = dashboardPage(
 ), server = shinyServer(function(input, output, session) {
     print("==============================================================================================================================")
     updateTabsetPanel(session, "tabz", selected = isolate(parseQueryString(session$clientData$url_search))[["tab"]])
-    allData = fromJSON("allData.json", simplifyVector = T, simplifyDataFrame = T, simplifyMatrix = T, flatten = T)
     theData <- reactive({
         query <- parseQueryString(session$clientData$url_search)
-        temp = allData[[query[["cId"]]]][[query[["vId"]]]]
-        temp
+        fromJSON("allData.json", simplifyVector = T, simplifyDataFrame = T, simplifyMatrix = T, flatten = T)[[query[["cId"]]]][[query[["vId"]]]]
     })
     log <- reactive({
         theData()$location
     })
     output$bvts = renderPlot({
-        plot(theData()[["424"]]$time, theData()[["424"]]$BATT_VOLT, type="l")
+        plot(main = "Battery Voltage over Time", theData()[["424"]]$time, theData()[["424"]]$BATT_VOLT, xlab = "Time in Epoch", ylab = "Battery Voltage in Volts", type="o")
     })
 }))
 
