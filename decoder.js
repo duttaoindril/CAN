@@ -18,13 +18,15 @@ chokidar.watch('unprocessed', {
     setTimeout(function(params) {
         fs.readFile(event, function(err, data) {
             log("Reading file " + event + "...\n");
-            var campId = "campaign0";
-            var vId = "vin0";
+            console.log("Time: " + parseInt(event.substring(event.length - 17, event.length - 4)));
+            var time = parseInt(event.substring(event.length - 17, event.length - 4));
+            var campId = "campaign0"; //event.substring(0, x);
+            var vId = "vin0"; //event.substring(x, event.length-17);
             if (allData[campId] == undefined)
                 allData[campId] = {};
             if (allData[campId][vId] == undefined)
                 allData[campId][vId] = {};
-            var decodedObj = decode(data, campId, vId);
+            var decodedObj = decode(data, campId, vId, (time / 1000).toFixed(0));
             if (decodedObj === false) fs.writeFile(errr + "/" + event.substr(11), data, function(err) {
                 if (err) {
                     console.log(err);
@@ -49,10 +51,11 @@ chokidar.watch('unprocessed', {
     }, 100);
 });
 
-function decode(data, campaignId, vinId) {
+function decode(data, campaignId, vinId, time) {
     var byteArray = data.toString("hex").match(/.{1,2}/g);
+    var timeSaved = time;
     while (byteArray.length > 0) {
-        var time = null;
+        time = timeSaved;
         if (byteArray[0] == "01") {
             time = parseInt("0x" + byteArray.splice(2, 4).join([separator = '']));
             log("Time: " + (new Date(time * 1000).toLocaleString()));
@@ -78,12 +81,13 @@ function decode(data, campaignId, vinId) {
         for (var i = 0; i < messageCount; i++) {
             var messageId = byteArray.splice(0, 2).join([separator = '']).replace(/^[0]+/g, "").toUpperCase();
             log("Message ID: " + messageId);
+            if (canDict[messageId] === undefined) return false;
             var message = byteArray.splice(0, canDict[messageId]["messageLength"]);
             log("Message: " + message);
             log("Binary Message: " + hex2bin(message) + "\n--");
             if (canDict[messageId]["signals"] != undefined) {
                 if (allData[campaignId][vinId][messageId] == undefined) allData[campaignId][vinId][messageId] = [];
-                var decodedMessage = decodeHelper(time, latitude, longitude, message, hex2bin(message).reverse(), canDict[messageId]["signals"]);
+                var decodedMessage = decodeHelper(time, latitude, longitude, message, hex2bin(message).reverse(), canDict[messageId]["signals"], hex2bin(message).join(""));
                 if (decodedMessage === false) return false;
                 else allData[campaignId][vinId][messageId].push(decodedMessage);
             }
@@ -93,7 +97,7 @@ function decode(data, campaignId, vinId) {
     return JSON.stringify(allData, null, spaze);
 }
 
-function decodeHelper(time, lat, lon, hexmessage, binmessage, signals) {
+function decodeHelper(time, lat, lon, hexmessage, binmessage, signals, binmessageJoined) {
     var tempJObject = {
         "time": time,
         "latitude": lat,
@@ -120,8 +124,13 @@ function decodeHelper(time, lat, lon, hexmessage, binmessage, signals) {
                 tempJObject[signal.name + "Unit"] = null;
                 tempJObject[signal.name + "UnitRefer"] = signal.units;
             }
-        } else if (signal.type == "combination") // log("r[bits] is a " + typeof r(bits) + " with value " + r(bits));
-            temp = signal[bits];
+        } else if (signal.type == "combination") { // log("r[bits] is a " + typeof r(bits) + " with value " + r(bits));
+            var str = signal[bits];
+            temp = str.substr(0, str.indexOf("|"));
+            tempJObject[signal.name + "CombinationName"] = str.substr(str.indexOf("|") + 1);
+            tempJObject[signal.name + "CombinationMeaning"] = signal[temp];
+            temp = parseInt(temp);
+        }
         log("Temp is a " + typeof temp + " with value " + temp);
         if (temp === undefined)
             return false;

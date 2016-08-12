@@ -1,1 +1,264 @@
-{}
+{
+  "campaign0": {
+    "vin0": {
+      "101": [
+        {
+          "time": 315965950,
+          "latitude": 0,
+          "longitude": 0,
+          "ENGINE_STATUSCombinationName": "CRANKING",
+          "ENGINE_STATUSCombinationMeaning": "Engine cranking",
+          "ENGINE_STATUS": 1
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "ENGINE_STATUSCombinationName": "CRANKING",
+          "ENGINE_STATUSCombinationMeaning": "Engine cranking",
+          "ENGINE_STATUS": 1
+        }
+      ],
+      "424": [
+        {
+          "time": 1470864001,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 15,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864002,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 14,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864003,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 10,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864004,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 5,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864005,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 10,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864006,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 15,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864007,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 0,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864008,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 10,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864009,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 0,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        },
+        {
+          "time": 1470864010,
+          "latitude": 0,
+          "longitude": 0,
+          "IGN_STATCombinationName": "IGN_LOCK",
+          "IGN_STATCombinationMeaning": "Ignition lock",
+          "IGN_STAT": 3,
+          "BATT_VOLTUnit": "V",
+          "BATT_VOLT": 5,
+          "FWIPER_ACTV": false,
+          "RWIPER_ACTV": false,
+          "LOBEAM_ON": false,
+          "HIBEAM_ON": true,
+          "FT_FOG_ON": false
+        }
+      ],
+      "425": [
+        {
+          "time": 315965691,
+          "latitude": 0,
+          "longitude": 0,
+          "WIP_SWCombinationName": "STOP",
+          "WIP_SWCombinationMeaning": "Integer Mode",
+          "WIP_SW": -1,
+          "WIP_STATCombinationName": "STOP",
+          "WIP_STATCombinationMeaning": "Stopped (including MIST & WASH moving)",
+          "WIP_STAT": 0,
+          "HAZ_SW": false
+        },
+        {
+          "time": 315965946,
+          "latitude": 0,
+          "longitude": 0,
+          "WIP_SWCombinationName": "STOP",
+          "WIP_SWCombinationMeaning": "Integer Mode",
+          "WIP_SW": -1,
+          "WIP_STATCombinationName": "STOP",
+          "WIP_STATCombinationMeaning": "Stopped (including MIST & WASH moving)",
+          "WIP_STAT": 0,
+          "HAZ_SW": false
+        }
+      ],
+      "location": {
+        "315965690": {
+          "lon": 0,
+          "lat": 0
+        },
+        "315965691": {
+          "lon": 0,
+          "lat": 0
+        },
+        "315965946": {
+          "lon": 0,
+          "lat": 0
+        },
+        "315965950": {
+          "lon": 0,
+          "lat": 0
+        },
+        "315965951": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864001": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864002": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864003": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864004": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864005": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864006": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864007": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864008": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864009": {
+          "lon": 0,
+          "lat": 0
+        },
+        "1470864010": {
+          "lon": 0,
+          "lat": 0
+        }
+      }
+    }
+  }
+}
